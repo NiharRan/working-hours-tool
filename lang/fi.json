@@ -1,0 +1,22 @@
+{
+    "Username": "käyttäjä",
+    "Password": "Salasana",
+    "Remember me": "Muista minut",
+    "Name": "koko nimi]",
+    "Email": "Sähköposti",
+    "Confirm Password": "Vahvista salasana",
+    "Uudenmaan Rala Palvelut Oy Working hours tool": "Uudenmaan Rala Palvelut Oy Työtunti työkalu",
+    "User": "Käyttäjä",
+    "Status": "Tila",
+    "Active project": "Aktiivinen projekti",
+    "Start work on this project": "Aloita työ projektissa",
+    "Choose  a project": "Valitse projekti",
+    "Users": "Hallitse käyttäjiä",
+    "Create a new user": "Luo uusi käyttäjä",
+    "Edit": "Muokkaa käyttäjää",
+    "Back": "Palaa päänäkymään",
+    "Projects": "Hallitse projekteja",
+    "Create a new project": "Luo uusi projekti",
+    "Log Out": "Kirjaudu ulos",
+    "Stop working for the day": "Lopeta työnteko päivältä"
+}
