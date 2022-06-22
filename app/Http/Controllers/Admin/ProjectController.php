@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Admin\ProjectRepo;
+use App\Http\Repositories\ProjectRepo;
 use App\Http\Requests\Admin\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    private ProjectRepo $projectRepo;
+    private \App\Http\Repositories\ProjectRepo $projectRepo;
     public function __construct(ProjectRepo $projectRepo)
     {
         $this->projectRepo = $projectRepo;

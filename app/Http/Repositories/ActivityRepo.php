@@ -32,6 +32,22 @@ class ActivityRepo
         ])->first();
     }
 
+    public function all(): Builder
+    {
+        return $this->activity->query()->with([
+            'user', 'project'
+        ])->orderBy('status', 'DESC')->orderBy('id', 'DESC');
+    }
+
+    public function getCreatePageData()
+    {
+        $data = [];
+        $data['users'] = (new UserRepo)->all()->where('status', 1)->get();
+        $data['projects'] = (new ProjectRepo)->all()->where('status', 1)->get();
+
+        return $data;
+    }
+
 
     /**
      * @throws \Exception
@@ -43,9 +59,9 @@ class ActivityRepo
         try {
             $running = $this->getRunningActivity($data['user_id']);
             if ($running) {
-                $this->update([], $running);
+                $this->stopActivity($running);
             }
-            $project = $this->activity->create([
+            $activity = $this->activity->create([
                 'user_id' => $data['user_id'],
                 'project_id' => $data['project_id'],
                 'start_at' => date('Y-m-d H:i:s'),
@@ -54,7 +70,7 @@ class ActivityRepo
             ]);
             DB::commit();
 
-            return $project;
+            return $activity;
         } catch (\Exception $e) {
             DB::rollBack();
             throw $e;
@@ -69,16 +85,37 @@ class ActivityRepo
         DB::beginTransaction();
 
         try {
+            $activity->update([
+                'user_id' => $data['user_id'],
+                'project_id' => $data['project_id'],
+            ]);
+            DB::commit();
+
+            return $activity;
+        } catch (\Exception $e) {
+            DB::rollBack();
+            throw $e;
+        }
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function stopActivity(Activity $activity)
+    {
+        DB::beginTransaction();
+
+        try {
             $end_date = date('Y-m-d H:i:s');
             $total_hours = ActivityService::calculateTotalHours($activity, $end_date);
-            $project = $activity->update([
+            $activity = $activity->update([
                 'end_at' => $end_date,
                 'total_hours' => $total_hours,
                 'status' => 2
             ]);
             DB::commit();
 
-            return $project;
+            return $activity;
         } catch (\Exception $e) {
             DB::rollBack();
             throw $e;

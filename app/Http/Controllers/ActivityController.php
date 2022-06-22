@@ -27,7 +27,7 @@ class ActivityController extends Controller
     public function update(ActivityRequest $request, Activity $activity)
     {
         try {
-            $this->activityRepo->update($request->all(), $activity);
+            $this->activityRepo->stopActivity($activity);
             return redirect()->route('dashboard')->with(['success' => __('Work stopped successfully!')]);
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\Admin\ActivityRepo;
-use App\Http\Requests\Admin\ActivityRequest;
+use App\Http\Requests\ActivityRequest;
 use App\Models\Activity;
 use Illuminate\Http\Request;
 

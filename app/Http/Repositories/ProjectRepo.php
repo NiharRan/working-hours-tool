@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Repositories\Admin;
+namespace App\Http\Repositories;
 
 use App\Models\Project;
 use App\Traits\RepositoryTrait;

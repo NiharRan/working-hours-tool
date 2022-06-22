@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Repositories\DashboardRepo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;

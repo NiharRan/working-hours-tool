@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Admin\UserRepo;
 use App\Http\Requests\Admin\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    private UserRepo $userRepo;
-    public function __construct(UserRepo $userRepo)
+    private \App\Http\Repositories\UserRepo $userRepo;
+    public function __construct(\App\Http\Repositories\UserRepo $userRepo)
     {
         $this->userRepo = $userRepo;
     }
