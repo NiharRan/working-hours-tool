@@ -12,6 +12,63 @@
         <div>
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white shadow-xl sm:rounded-lg">
+                    <div>
+                        <form action="" method="get" id="search-form">
+                            <div class="grid grid-cols-2 gap-4 px-4 pt-4 pb-2">
+                                <div>
+                                    <select name="user_id" class="border border-gray-200 w-full rounded-md">
+                                        <option value="">{{ __('Choose  a user') }}</option>
+                                        @foreach($users as $item)
+                                            @php
+                                            $selected = request()->get('user_id') == $item->id ? 'selected' : ''
+                                            @endphp
+                                            <option value="{{ $item->id }}" {{ $selected }}>{{ $item->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('user_id')
+                                    <span class="text-red-500 font-bold mt-1 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div>
+                                    <select name="project_id" class="border border-gray-200 w-full rounded-md">
+                                        <option value="">{{ __('Choose  a project') }}</option>
+                                        @foreach($projects as $item)
+                                            @php
+                                                $selected = request()->get('project_id') == $item->id ? 'selected' : ''
+                                            @endphp
+                                            <option value="{{ $item->id }}" {{ $selected }}>{{ $item->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('project_id')
+                                    <span class="text-red-500 font-bold mt-1 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 px-4 pt-2 pb-4">
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input datepicker datepicker-autohide datepicker-format="yyyy-mm-dd" name="start_date" value="{{ request()->get('start_date') }}" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start date">
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input datepicker datepicker-autohide datepicker-format="yyyy-mm-dd" name="end_date" value="{{ request()->get('end_date') }}" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="End date">
+                                </div>
+                                <div>
+                                    <x-jet-button class="mt-1">
+                                        {{ __('Search') }}
+                                    </x-jet-button>
+                                    <a href="#" id="export-btn"
+                                        class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-500 active:bg-green-600 focus:outline-none focus:border-green-600 focus:ring focus:ring-green-300 disabled:opacity-25 transition">
+                                        {{ __('Export') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                     @if(session()->has('success'))
                         <div class="bg-green-100 p-4 font-bold text-green-600 mb-4">{{ session()->get('success') }}</div>
                     @endif
@@ -72,3 +129,13 @@
         </div>
     </div>
 </x-master-layout>
+
+<script>
+    const exportBtn = document.querySelector('#export-btn')
+    exportBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        const form = document.querySelector('#search-form')
+        form.setAttribute('action', '{{ route('admin.export', 'activity') }}')
+        form.submit();
+    })
+</script>

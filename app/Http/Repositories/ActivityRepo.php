@@ -7,6 +7,7 @@ use App\Models\Activity;
 use App\Models\Project;
 use App\Models\User;
 use App\Traits\RepositoryTrait;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class ActivityRepo
@@ -34,9 +35,44 @@ class ActivityRepo
 
     public function all()
     {
-        return $this->activity->query()->with([
+        $query = $this->activity->query()->with([
             'user', 'project'
-        ])->orderBy('status', 'DESC')->orderBy('id', 'DESC');
+        ]);
+
+        $user_id = request()->get('user_id', null);
+        if ($user_id) {
+            $query = $query->where('user_id', $user_id);
+        }
+
+        $project_id = request()->get('project_id', null);
+        if ($project_id) {
+            $query = $query->where('project_id', $project_id);
+        }
+
+        $start_date = request()->get('start_date', null);
+        if ($start_date) {
+            $start_date = date('Y-m-d 00:00:00', strtotime($start_date));
+            $query = $query->where('start_at', '>=', $start_date);
+        }
+
+        $end_date = request()->get('end_date', null);
+        if ($end_date) {
+            $end_date = date('Y-m-d 23:59:59', strtotime($end_date));
+            $query = $query->where('end_at', '<=', $end_date);
+        }
+
+        return $query->orderBy('status', 'DESC')->orderBy('id', 'DESC');
+    }
+
+    public function getIndexPageData()
+    {
+        $per_page = request()->get('per_page', 20);
+        $data = [];
+        $data['users'] = (new UserRepo)->all()->where('status', 1)->get();
+        $data['projects'] = (new ProjectRepo)->all()->where('status', 1)->get();
+        $data['activities'] = $this->paginate($per_page);
+
+        return $data;
     }
 
     public function getCreatePageData()

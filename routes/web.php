@@ -64,6 +64,9 @@ Route::middleware([
         Route::get('/activities/{activity}', [
             \App\Http\Controllers\Admin\ActivityController::class, 'stopActivity'
         ])->name('admin.activities.stop');
+        Route::get('/{type}/export', [
+            \App\Http\Controllers\Admin\ActivityController::class, 'export'
+        ])->name('admin.export');
     });
 });
 

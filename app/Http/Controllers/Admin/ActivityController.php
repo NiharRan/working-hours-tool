@@ -18,8 +18,8 @@ class ActivityController extends Controller
 
     public function index()
     {
-        $activities = $this->activityRepo->paginate(10);
-        return view('admin.activities.index', compact('activities'));
+        $data = $this->activityRepo->getIndexPageData();
+        return view('admin.activities.index', $data);
     }
 
     public function create()
@@ -64,5 +64,10 @@ class ActivityController extends Controller
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
+    }
+
+    public function export(Request $request, $type)
+    {
+        dd($type);
     }
 }
