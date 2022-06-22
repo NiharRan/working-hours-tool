@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Repositories\UserRepo;
 use App\Http\Requests\Admin\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    private \App\Http\Repositories\UserRepo $userRepo;
-    public function __construct(\App\Http\Repositories\UserRepo $userRepo)
+    private UserRepo $userRepo;
+    public function __construct(UserRepo $userRepo)
     {
         $this->userRepo = $userRepo;
     }
@@ -28,16 +29,13 @@ class UserController extends Controller
 
     public function store(UserRequest $request)
     {
-        try {
-            $this->userRepo->store($request->all());
+        $result = $this->userRepo->store($request->all());
+        if ($result instanceof User) {
             return redirect()->route('admin.users.index')->with([
                 'success' => 'User created successfully!'
             ]);
-        } catch (\Exception $e) {
-            redirect()->back()->withErrors([
-                'error' => $e->getMessage()
-            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 
     public function edit(User $user)
@@ -48,15 +46,15 @@ class UserController extends Controller
 
     public function update(UserRequest $request, User $user)
     {
-        try {
-            $this->userRepo->update($request->all(), $user);
-            return redirect()->route('admin.users.index')->with([
-                'success' => 'User info updated successfully!'
-            ]);
-        } catch (\Exception $e) {
-            redirect()->back()->withErrors([
-                'error' => $e->getMessage()
-            ]);
-        }
+        $result = $this->userRepo->update($request->all(), $user);
+        return redirect()->route('admin.users.index')->with([
+            'success' => 'User info updated successfully!'
+        ]);
+       if ($result instanceof User) {
+           return redirect()->route('admin.users.index')->with([
+               'success' => 'User info updated successfully!'
+           ]);
+       }
+       return redirect()->back()->with(['error' => $result]);
     }
 }

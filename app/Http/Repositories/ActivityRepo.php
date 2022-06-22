@@ -91,7 +91,8 @@ class ActivityRepo
     public function store($data)
     {
         DB::beginTransaction();
-
+        $message = '';
+        $activity = null;
         try {
             $running = $this->getRunningActivity($data['user_id']);
             if ($running) {
@@ -105,12 +106,11 @@ class ActivityRepo
                 'status' => 1
             ]);
             DB::commit();
-
-            return $activity;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw $e;
+            $message = $e->getMessage();
         }
+        return $activity ?: $message;
     }
 
     /**
@@ -119,19 +119,18 @@ class ActivityRepo
     public function update($data, Activity $activity)
     {
         DB::beginTransaction();
-
+        $message = '';
         try {
-            $activity->update([
+            $activity = $activity->update([
                 'user_id' => $data['user_id'],
                 'project_id' => $data['project_id'],
             ]);
             DB::commit();
-
-            return $activity;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw $e;
+            $message = $e->getMessage();
         }
+        return $activity ?: $message;
     }
 
     /**
@@ -140,7 +139,7 @@ class ActivityRepo
     public function stopActivity(Activity $activity)
     {
         DB::beginTransaction();
-
+        $message = '';
         try {
             $end_date = date('Y-m-d H:i:s');
             $total_hours = ActivityService::calculateTotalHours($activity, $end_date);
@@ -150,11 +149,11 @@ class ActivityRepo
                 'status' => 2
             ]);
             DB::commit();
-
-            return $activity;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw $e;
+            $message = $e->getMessage();
         }
+
+        return $activity ?: $message;
     }
 }

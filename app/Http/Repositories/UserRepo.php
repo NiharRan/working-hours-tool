@@ -31,19 +31,20 @@ class UserRepo
     public function store($data)
     {
         DB::beginTransaction();
-
+        $message = '';
+        $user = null;
         try {
             $data = Arr::only($data, ['name', 'username', 'email', 'role', 'password']);
             $data['password'] = Hash::make($data['password']);
             $data['status'] = 1;
             $user = User::create($data);
             DB::commit();
-
-            return $user;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw new \Exception($e->getMessage());
+            $message = $e->getMessage();
         }
+
+        return $user ?: $message;
     }
 
 
@@ -53,16 +54,16 @@ class UserRepo
     public function update($data, User $user)
     {
         DB::beginTransaction();
-
+        $message = '';
         try {
             $data = Arr::only($data, ['name', 'username', 'email', 'role', 'status']);
-            $user = $user->update($data);
+            $user->update($data);
             DB::commit();
-
-            return $user;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw new \Exception($e->getMessage());
+            $message = $e->getMessage();
         }
+
+        return $user ?: $message;
     }
 }

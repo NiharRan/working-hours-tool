@@ -30,12 +30,13 @@ class ActivityController extends Controller
 
     public function store(ActivityRequest $request)
     {
-        try {
-            $this->activityRepo->store($request->all());
-            return redirect()->route('admin.activities.index')->with(['success' => __('Project assigned successfully!')]);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        $result = $this->activityRepo->store($request->all());
+        if ($result instanceof Activity) {
+            return redirect()->route('admin.activities.index')->with([
+                'success' => __('Project assigned successfully!')
+            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 
     public function edit(Activity $activity)
@@ -47,23 +48,25 @@ class ActivityController extends Controller
 
     public function update(ActivityRequest $request, Activity $activity)
     {
-        try {
-            $this->activityRepo->update($request->all(), $activity);
-            return redirect()->route('admin.activities.index')->with(['success' => __('Activity info updated successfully!')]);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        $result = $this->activityRepo->update($request->all(), $activity);
+        if ($result instanceof Activity) {
+            return redirect()->route('admin.activities.index')->with([
+                'success' => __('Activity info updated successfully!')
+            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 
 
     public function stopActivity(Request $request, Activity $activity)
     {
-        try {
-            $this->activityRepo->stopActivity($activity);
-            return redirect()->route('admin.activities.index')->with(['success' => __('Activity stopped successfully!')]);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        $result = $this->activityRepo->stopActivity($activity);
+        if ($result instanceof Activity) {
+            return redirect()->route('admin.activities.index')->with([
+                'success' => __('Activity stopped successfully!')
+            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 
     public function export(Request $request, $type)

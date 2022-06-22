@@ -12,6 +12,9 @@
 <div>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white shadow-xl sm:rounded-lg md:px-6 md:py-4">
+            @if(session()->has('error'))
+                <div class="bg-red-100 p-4 font-bold text-red-600 mb-4">{{ session()->get('error') }}</div>
+            @endif
             <form method="POST" action="{{ route('admin.projects.store') }}">
                 @csrf
                 <div class="grid grid-cols-2 gap-4">

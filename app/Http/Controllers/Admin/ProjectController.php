@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    private \App\Http\Repositories\ProjectRepo $projectRepo;
+    private ProjectRepo $projectRepo;
     public function __construct(ProjectRepo $projectRepo)
     {
         $this->projectRepo = $projectRepo;
@@ -29,16 +29,13 @@ class ProjectController extends Controller
 
     public function store(ProjectRequest $request)
     {
-        try {
-            $this->projectRepo->store($request->all());
+        $result = $this->projectRepo->store($request->all());
+        if ($result instanceof Project) {
             return redirect()->route('admin.projects.index')->with([
                 'success' => 'Project created successfully!'
             ]);
-        } catch (\Exception $e) {
-            redirect()->back()->withErrors([
-                'error' => $e->getMessage()
-            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 
     public function edit(Project $project)
@@ -49,15 +46,12 @@ class ProjectController extends Controller
 
     public function update(ProjectRequest $request, Project $project)
     {
-        try {
-            $this->projectRepo->update($request->all(), $project);
+        $result = $this->projectRepo->update($request->all(), $project);
+        if ($result instanceof Project) {
             return redirect()->route('admin.projects.index')->with([
                 'success' => 'Project info updated successfully!'
             ]);
-        } catch (\Exception $e) {
-            redirect()->back()->withErrors([
-                'error' => $e->getMessage()
-            ]);
         }
+        return redirect()->back()->with(['error' => $result]);
     }
 }

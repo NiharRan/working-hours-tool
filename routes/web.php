@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/live', function () {
     Artisan::call('optimize');
-    Artisan::call('migrate');
     Artisan::call('key:generate');
+//    Artisan::call('migrate');
 });
 
 Route::post('/change-local', function (\Illuminate\Http\Request $request) {

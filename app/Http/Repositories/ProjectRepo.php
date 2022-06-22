@@ -30,19 +30,19 @@ class ProjectRepo
     public function store($data)
     {
         DB::beginTransaction();
-
+        $message = '';
+        $project = null;
         try {
             $project = Project::create([
                 'name' => $data['name'],
                 'status' => 1
              ]);
             DB::commit();
-
-            return $project;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw new \Exception($e->getMessage());
+            $message = $e->getMessage();
         }
+        return $project ?: $message;
     }
 
 
@@ -52,16 +52,15 @@ class ProjectRepo
     public function update($data, Project $project)
     {
         DB::beginTransaction();
-
+        $message = '';
         try {
             $data = Arr::only($data, ['name', 'status']);
             $project = $project->update($data);
             DB::commit();
-
-            return $project;
         } catch (\Exception $e) {
             DB::rollBack();
-            throw new \Exception($e->getMessage());
+            $message = $e->getMessage();
         }
+        return $project ?: $message;
     }
 }
