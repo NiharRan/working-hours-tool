@@ -11,11 +11,9 @@
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                         <div>
-                            <x-jet-application-logo class="block h-12 w-auto" />
-                        </div>
-
-                        <div class="mt-8 text-2xl">
-                            {{ __('Uudenmaan Rala Palvelut Oy Working hours tool') }}
+                            <h1 class="text-2xl">
+                                {{ __('Uudenmaan Rala Palvelut Oy Working hours tool') }}
+                            </h1>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
