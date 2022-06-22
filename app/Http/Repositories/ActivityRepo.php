@@ -32,7 +32,7 @@ class ActivityRepo
         ])->first();
     }
 
-    public function all(): Builder
+    public function all()
     {
         return $this->activity->query()->with([
             'user', 'project'
