@@ -22,6 +22,9 @@
                             @if(session()->has('success'))
                                 <div class="bg-green-100 p-4 font-bold text-green-600 mb-4">{{ session()->get('success') }}</div>
                             @endif
+                            @if(session()->has('error'))
+                                <div class="bg-red-100 p-4 font-bold text-red-600 mb-4">{{ session()->get('error') }}</div>
+                            @endif
                             <table class="border border-collapse w-full">
                                 <tr>
                                     <th class="border text-left px-2 py-1">{{ __('User') }}</th>

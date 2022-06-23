@@ -41,7 +41,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::3x8oLw8zNbl37o4n',
+            '_route' => 'generated::6WDbW3EovbFiL8hW',
           ),
           1 => NULL,
           2 => 
@@ -151,7 +151,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::EXiu2PxM7t4pa6X2',
+            '_route' => 'generated::SmkxFCeiAGQsiHLy',
           ),
           1 => NULL,
           2 => 
@@ -208,7 +208,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::fqsOVTjFuOUQ1sBy',
+            '_route' => 'generated::dIsgDieA7sohfaek',
           ),
           1 => NULL,
           2 => 
@@ -258,172 +258,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/two-factor-challenge' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.login',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::f3gOLV0umMQ6LJYL',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/user/two-factor-authentication' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.enable',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.disable',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/user/confirmed-two-factor-authentication' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.confirm',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/user/two-factor-qr-code' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.qr-code',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/user/two-factor-secret-key' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.secret-key',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/user/two-factor-recovery-codes' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'two-factor.recovery-codes',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::FEfcmSiWd3rOXwd4',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
       '/user/profile' => 
       array (
         0 => 
@@ -450,7 +284,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::6HYvis8tQB1DZqRl',
+            '_route' => 'generated::5qTt2UEpajPtCw6w',
           ),
           1 => NULL,
           2 => 
@@ -489,7 +323,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::X5vtMtR9YW6Zrqdo',
+            '_route' => 'generated::1zCYdiQQnNEgFtIa',
           ),
           1 => NULL,
           2 => 
@@ -509,7 +343,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::bjhZlFpyjsKc6X8C',
+            '_route' => 'generated::wvwX0YDBlVIKYQ1k',
           ),
           1 => NULL,
           2 => 
@@ -587,7 +421,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::jwnnd7F3lQ7L3VcH',
+            '_route' => 'generated::twihdUmOkJUifjog',
           ),
           1 => NULL,
           2 => 
@@ -607,7 +441,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::6tvVp7VhWbLqj9ir',
+            '_route' => 'generated::yVCmIXNqj5fhZpAE',
           ),
           1 => NULL,
           2 => 
@@ -627,7 +461,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::FIFiD89auIDeM7X1',
+            '_route' => 'generated::Qt44vEToYWDCRbsQ',
           ),
           1 => NULL,
           2 => 
@@ -646,7 +480,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::dRkyaBkjZSoxqfjo',
+            '_route' => 'generated::0jwrR3SlZ0MRtxTH',
           ),
           1 => NULL,
           2 => 
@@ -1325,7 +1159,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3x8oLw8zNbl37o4n' => 
+    'generated::6WDbW3EovbFiL8hW' => 
     array (
       'methods' => 
       array (
@@ -1348,7 +1182,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::3x8oLw8zNbl37o4n',
+        'as' => 'generated::6WDbW3EovbFiL8hW',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1594,7 +1428,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::EXiu2PxM7t4pa6X2' => 
+    'generated::SmkxFCeiAGQsiHLy' => 
     array (
       'methods' => 
       array (
@@ -1616,7 +1450,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::EXiu2PxM7t4pa6X2',
+        'as' => 'generated::SmkxFCeiAGQsiHLy',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1708,7 +1542,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::fqsOVTjFuOUQ1sBy' => 
+    'generated::dIsgDieA7sohfaek' => 
     array (
       'methods' => 
       array (
@@ -1731,7 +1565,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::fqsOVTjFuOUQ1sBy',
+        'as' => 'generated::dIsgDieA7sohfaek',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1824,360 +1658,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'two-factor.login' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'two-factor-challenge',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'guest:web',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@create',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@create',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.login',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::f3gOLV0umMQ6LJYL' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'two-factor-challenge',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'guest:web',
-          2 => 'throttle:two-factor',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@store',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@store',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::f3gOLV0umMQ6LJYL',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.enable' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'user/two-factor-authentication',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@store',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@store',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.enable',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.confirm' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'user/confirmed-two-factor-authentication',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\ConfirmedTwoFactorAuthenticationController@store',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\ConfirmedTwoFactorAuthenticationController@store',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.confirm',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.disable' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'DELETE',
-      ),
-      'uri' => 'user/two-factor-authentication',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@destroy',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@destroy',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.disable',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.qr-code' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'user/two-factor-qr-code',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorQrCodeController@show',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorQrCodeController@show',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.qr-code',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.secret-key' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'user/two-factor-secret-key',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController@show',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController@show',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.secret-key',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'two-factor.recovery-codes' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'user/two-factor-recovery-codes',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@index',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@index',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'two-factor.recovery-codes',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::FEfcmSiWd3rOXwd4' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'user/two-factor-recovery-codes',
-      'action' => 
-      array (
-        'domain' => NULL,
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth:web',
-          2 => 'password.confirm',
-        ),
-        'uses' => 'Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@store',
-        'controller' => 'Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@store',
-        'namespace' => 'Laravel\\Fortify\\Http\\Controllers',
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::FEfcmSiWd3rOXwd4',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'profile.show' => 
     array (
       'methods' => 
@@ -2218,7 +1698,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::6HYvis8tQB1DZqRl' => 
+    'generated::5qTt2UEpajPtCw6w' => 
     array (
       'methods' => 
       array (
@@ -2239,7 +1719,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::6HYvis8tQB1DZqRl',
+        'as' => 'generated::5qTt2UEpajPtCw6w',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2349,7 +1829,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::X5vtMtR9YW6Zrqdo' => 
+    'generated::1zCYdiQQnNEgFtIa' => 
     array (
       'methods' => 
       array (
@@ -2361,7 +1841,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::X5vtMtR9YW6Zrqdo',
+        'as' => 'generated::1zCYdiQQnNEgFtIa',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2377,7 +1857,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::bjhZlFpyjsKc6X8C' => 
+    'generated::wvwX0YDBlVIKYQ1k' => 
     array (
       'methods' => 
       array (
@@ -2389,7 +1869,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::bjhZlFpyjsKc6X8C',
+        'as' => 'generated::wvwX0YDBlVIKYQ1k',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2514,7 +1994,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::jwnnd7F3lQ7L3VcH' => 
+    'generated::twihdUmOkJUifjog' => 
     array (
       'methods' => 
       array (
@@ -2531,13 +2011,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000683957c4000000003dd7fa77";}";s:4:"hash";s:44:"7WSAkWvy7dEwp/WRjByMDFQyJZHvIvabW5M2fVrVz3c=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005c48c7f80000000045fd0713";}";s:4:"hash";s:44:"7RsLCG+dOb/vSceNd17ID36jY9DHFKvu7AfSoiDnuS8=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::jwnnd7F3lQ7L3VcH',
+        'as' => 'generated::twihdUmOkJUifjog',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2553,7 +2033,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::6tvVp7VhWbLqj9ir' => 
+    'generated::yVCmIXNqj5fhZpAE' => 
     array (
       'methods' => 
       array (
@@ -2567,17 +2047,17 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:414:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:195:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:388:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:169:"function () {
     \\Illuminate\\Support\\Facades\\Artisan::call(\'optimize\');
-    \\Illuminate\\Support\\Facades\\Artisan::call(\'migrate\');
     \\Illuminate\\Support\\Facades\\Artisan::call(\'key:generate\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006839543a000000003dd7fa77";}";s:4:"hash";s:44:"LyTkPKH0hyylibUGY5QYDglKi0oFZedPIN9obSj2vig=";}}',
+//    Artisan::call(\'migrate\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005c48c7fa0000000045fd0713";}";s:4:"hash";s:44:"F3bJDLFBs2MZPdq357KSql3xk2XXdtWB9UwnwtKmKDY=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::6tvVp7VhWbLqj9ir',
+        'as' => 'generated::yVCmIXNqj5fhZpAE',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2593,7 +2073,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::FIFiD89auIDeM7X1' => 
+    'generated::Qt44vEToYWDCRbsQ' => 
     array (
       'methods' => 
       array (
@@ -2609,13 +2089,13 @@ app('router')->setCompiledRoutes(
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:378:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:159:"function (\\Illuminate\\Http\\Request $request) {
     \\Illuminate\\Support\\Facades\\Session::put(\'local\', $request->get(\'local\'));
     return \\redirect()->back();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000068395438000000003dd7fa77";}";s:4:"hash";s:44:"MXs/mMd8+hGIwbRvSX2vAYkOFeF8KzDzU7ZRorP30B0=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005c48c7fc0000000045fd0713";}";s:4:"hash";s:44:"Q0VkTygCbY4dFSMrSMxQGJAA10j+wwGORPZ2HGe45r8=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::FIFiD89auIDeM7X1',
+        'as' => 'generated::Qt44vEToYWDCRbsQ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2631,7 +2111,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::dRkyaBkjZSoxqfjo' => 
+    'generated::0jwrR3SlZ0MRtxTH' => 
     array (
       'methods' => 
       array (
@@ -2647,13 +2127,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:262:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006839543e000000003dd7fa77";}";s:4:"hash";s:44:"CnRzUW9xoIlSq143B194QvR21WOXvZKdVuYX3+4kioE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005c48c7fe0000000045fd0713";}";s:4:"hash";s:44:"qIycVdozmZftYFqGPJ9thkDj6w0Apj/XgEfOm1OhEy0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::dRkyaBkjZSoxqfjo',
+        'as' => 'generated::0jwrR3SlZ0MRtxTH',
       ),
       'fallback' => false,
       'defaults' => 

@@ -4,9 +4,9 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Activities') }}
             </h2>
-            <a href="{{ route('admin.activities.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-                {{ __('Create a new activity') }}
-            </a>
+{{--            <a href="{{ route('admin.activities.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">--}}
+{{--                {{ __('Create a new activity') }}--}}
+{{--            </a>--}}
         </x-slot>
 
         <div>
@@ -104,7 +104,7 @@
                                             <div id="dropdown-{{ $loop->index }}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700" data-popper-placement="left" style="position: absolute; inset: 0px auto auto 0px; margin: 0px;">
                                                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown--{{ $loop->index }}">
                                                     <li>
-                                                        <a href="{{ route('admin.activities.edit', $item->id) }}" class="block font-bold px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Edit') }}</a>
+                                                        <a href="{{ route('admin.activities.edit', $item->id) }}" class="block font-bold px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Change Project') }}</a>
                                                     </li>
                                                     @if($item->status == 1)
                                                         <li>

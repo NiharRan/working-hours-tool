@@ -88,7 +88,7 @@ class ActivityRepo
     /**
      * @throws \Exception
      */
-    public function store($data)
+    public function store($data): Activity|string
     {
         DB::beginTransaction();
         $message = '';
@@ -116,15 +116,22 @@ class ActivityRepo
     /**
      * @throws \Exception
      */
-    public function update($data, Activity $activity)
+    public function update($data, Activity $activity): Activity|string
     {
         DB::beginTransaction();
         $message = '';
         try {
-            $activity = $activity->update([
+            $updateData = [
                 'user_id' => $data['user_id'],
                 'project_id' => $data['project_id'],
-            ]);
+            ];
+            if (!empty($data['start_at'])) {
+                $updateData['start_at'] = date('Y-m-d H:i:s', strtotime($data['start_at']));
+            }
+            if (!empty($data['end_at'])) {
+                $updateData['end_at'] = date('Y-m-d H:i:s', strtotime($data['end_at']));
+            }
+            $activity->update($updateData);
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
@@ -136,14 +143,14 @@ class ActivityRepo
     /**
      * @throws \Exception
      */
-    public function stopActivity(Activity $activity)
+    public function stopActivity(Activity $activity): Activity|string
     {
         DB::beginTransaction();
         $message = '';
         try {
             $end_date = date('Y-m-d H:i:s');
             $total_hours = ActivityService::calculateTotalHours($activity, $end_date);
-            $activity = $activity->update([
+            $activity->update([
                 'end_at' => $end_date,
                 'total_hours' => $total_hours,
                 'status' => 2

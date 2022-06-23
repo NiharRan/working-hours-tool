@@ -406,14 +406,6 @@
       '/Users/nihardas/projects/hrm/public/storage' => '/Users/nihardas/projects/hrm/storage/app/public',
     ),
   ),
-  'fortify-options' => 
-  array (
-    'two-factor-authentication' => 
-    array (
-      'confirm' => true,
-      'confirmPassword' => true,
-    ),
-  ),
   'fortify' => 
   array (
     'guard' => 'web',
@@ -449,7 +441,6 @@
       1 => 'reset-passwords',
       2 => 'update-profile-information',
       3 => 'update-passwords',
-      4 => 'two-factor-authentication',
     ),
     'admin' => 
     array (
@@ -479,7 +470,7 @@
     ),
     'features' => 
     array (
-      0 => 'account-deletion',
+      0 => 'profile-photos',
     ),
     'profile_photo_disk' => 'public',
     'auth_session' => 'Laravel\\Jetstream\\Http\\Middleware\\AuthenticateSession',

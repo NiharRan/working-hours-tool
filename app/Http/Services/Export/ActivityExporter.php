@@ -2,6 +2,8 @@
 
 namespace App\Http\Services\Export;
 
+use App\Http\Services\ActivityService;
+
 class ActivityExporter extends Exporter
 {
     public function __construct()
@@ -17,7 +19,8 @@ class ActivityExporter extends Exporter
             __('Project'),
             __('Start At'),
             __('End At'),
-            __('Total minutes')
+            __('Total minutes'),
+            __('Errors')
         ];
     }
 
@@ -35,6 +38,13 @@ class ActivityExporter extends Exporter
     {
         $exportData = [];
         foreach($data as $key => $item) {
+            $total_hours = '';
+            $message = '';
+            if ($item->status != 1) {
+                $total_hours = ActivityService::formatTotalHours($item->total_hours);
+            } else {
+                $message = __('No end time');
+            }
             $index = $key + 1;
             $exportData[] = [
                 $index,
@@ -42,7 +52,8 @@ class ActivityExporter extends Exporter
                 $item->project->name,
                 $item->start_date_time,
                 $item->end_date_time,
-                floor($item->total_hours * 60),
+                $total_hours,
+                $message
             ];
         }
 

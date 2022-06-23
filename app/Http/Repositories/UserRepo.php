@@ -28,7 +28,7 @@ class UserRepo
     /**
      * @throws \Exception
      */
-    public function store($data)
+    public function store($data): User|string
     {
         DB::beginTransaction();
         $message = '';
@@ -51,7 +51,7 @@ class UserRepo
     /**
      * @throws \Exception
      */
-    public function update($data, User $user)
+    public function update($data, User $user): User|string
     {
         DB::beginTransaction();
         $message = '';

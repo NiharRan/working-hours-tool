@@ -27,7 +27,7 @@ class ProjectRepo
     /**
      * @throws \Exception
      */
-    public function store($data)
+    public function store($data): Project|string
     {
         DB::beginTransaction();
         $message = '';
@@ -49,13 +49,13 @@ class ProjectRepo
     /**
      * @throws \Exception
      */
-    public function update($data, Project $project)
+    public function update($data, Project $project): Project|string
     {
         DB::beginTransaction();
         $message = '';
         try {
             $data = Arr::only($data, ['name', 'status']);
-            $project = $project->update($data);
+            $project->update($data);
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
