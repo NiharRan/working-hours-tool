@@ -31,7 +31,7 @@ class Activity extends Model
      */
     protected $appends = [
         'activity_status',
-        'short_date_time',
+        'start_date_time',
         'end_date_time'
     ];
 

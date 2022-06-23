@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\ActivityRepo;
 use App\Http\Requests\ActivityRequest;
+use App\Http\Services\Export\ActivityExporter;
 use App\Models\Activity;
 use Illuminate\Http\Request;
 
@@ -71,6 +72,7 @@ class ActivityController extends Controller
 
     public function export(Request $request, $type)
     {
-        dd($type);
+        $data = $this->activityRepo->all()->get();
+        (new ActivityExporter())->downloadData($data);
     }
 }
