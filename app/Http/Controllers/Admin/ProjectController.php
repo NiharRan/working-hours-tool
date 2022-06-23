@@ -32,7 +32,7 @@ class ProjectController extends Controller
         $result = $this->projectRepo->store($request->all());
         if ($result instanceof Project) {
             return redirect()->route('admin.projects.index')->with([
-                'success' => 'Project created successfully!'
+                'success' => __('Project created successfully!')
             ]);
         }
         return redirect()->back()->with(['error' => $result]);
@@ -49,7 +49,7 @@ class ProjectController extends Controller
         $result = $this->projectRepo->update($request->all(), $project);
         if ($result instanceof Project) {
             return redirect()->route('admin.projects.index')->with([
-                'success' => 'Project info updated successfully!'
+                'success' => __('Project info updated successfully!')
             ]);
         }
         return redirect()->back()->with(['error' => $result]);

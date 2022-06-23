@@ -49,6 +49,9 @@
                                                     <li>
                                                         <a href="{{ route('admin.users.edit', $item->id) }}" class="block font-bold px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Edit') }}</a>
                                                     </li>
+                                                    <li>
+                                                        <a href="{{ route('users.password.edit', $item->id) }}" class="block font-bold px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Change Password') }}</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

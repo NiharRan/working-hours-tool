@@ -22,7 +22,7 @@
     "End At": "Lopetus aika",
     "Start date": "Aloituspäivämäärä",
     "End date": "päättymispäivä",
-    "Total hours": "Tehdyt tunnit",
+    "Total hours": "Tunnit yhteensä",
     "Total minutes": "Minuutit yhteensä",
     "Create a new project": "Luo uusi projekti",
     "Log Out": "Kirjaudu ulos",
@@ -60,7 +60,9 @@
     "Choose a status": "Valitse tila",
     "whoops something went wrong": "Virhe",
     "These credentials do not match our records": "Virheellinen käyttäjätunnus tai salasana",
-    "Change Project": "Muokkaa tapahtumaa",
+    "Change Project": "muokkaa käyttäjää",
     "No end time": "Ei lopetus aikaa",
-    "Errors": "Virheet"
+    "Errors": "Virheet",
+    "Change Password": "Vaihda salasana",
+    "User password updated successfully!": "Käyttäjän salasana päivitetty onnistuneesti!"
 }

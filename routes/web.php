@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/live', function () {
-    Artisan::call('optimize');
     Artisan::call('key:generate');
+    Artisan::call('optimize');
 //    Artisan::call('migrate');
 });
 
@@ -59,6 +59,12 @@ Route::middleware([
         ])->name('admin.dashboard');
 
         Route::resource('/users', \App\Http\Controllers\Admin\UserController::class, ['as' => 'admin']);
+        Route::get('/users/{user}/password', [
+            \App\Http\Controllers\Admin\PasswordResetController::class, 'edit'
+        ])->name('users.password.edit');
+        Route::put('/users/{user}/password', [
+            \App\Http\Controllers\Admin\PasswordResetController::class, 'update'
+        ])->name('users.password.update');
         Route::resource('/projects', \App\Http\Controllers\Admin\ProjectController::class, ['as' => 'admin']);
         Route::resource('/activities', \App\Http\Controllers\Admin\ActivityController::class, ['as' => 'admin']);
         Route::get('/activities/{activity}', [

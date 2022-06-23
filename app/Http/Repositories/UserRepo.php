@@ -66,4 +66,23 @@ class UserRepo
 
         return $user ?: $message;
     }
+
+    public function updatePassword($data, User $user)
+    {
+        DB::beginTransaction();
+        $message = '';
+        try {
+            $password = Hash::make($data['password']);
+            $user->update([
+                'password' => $password
+            ]);
+            DB::commit();
+
+        } catch (\Exception $e) {
+            DB::rollBack();
+            $message = $e->getMessage();
+        }
+
+        return $user ?: $message;
+    }
 }

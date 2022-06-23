@@ -47,12 +47,9 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user)
     {
         $result = $this->userRepo->update($request->all(), $user);
-        return redirect()->route('admin.users.index')->with([
-            'success' => 'User info updated successfully!'
-        ]);
        if ($result instanceof User) {
            return redirect()->route('admin.users.index')->with([
-               'success' => 'User info updated successfully!'
+               'success' => __('User info updated successfully!')
            ]);
        }
        return redirect()->back()->with(['error' => $result]);
