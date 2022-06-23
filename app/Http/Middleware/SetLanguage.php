@@ -18,7 +18,7 @@ class SetLanguage
      */
     public function handle(Request $request, Closure $next)
     {
-        App::setLocale(Session::get('local', 'en'));
+        App::setLocale(Session::get('local', 'fi'));
         return $next($request);
     }
 }

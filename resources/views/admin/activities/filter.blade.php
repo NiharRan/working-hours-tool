@@ -60,8 +60,6 @@
     const exportBtn = document.querySelector('#export-btn')
     exportBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        const form = document.querySelector('#search-form')
-        form.setAttribute('action', '{{ route('admin.export', 'activity') }}')
-        form.submit();
+        window.open('{{ route('admin.export', 'activity') }}', '_blank')
     })
 </script>
