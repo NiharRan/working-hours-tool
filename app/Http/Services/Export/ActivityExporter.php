@@ -19,7 +19,7 @@ class ActivityExporter extends Exporter
             __('Project'),
             __('Start At'),
             __('End At'),
-            __('Total minutes'),
+            __('Total hours'),
             __('Errors')
         ];
     }

@@ -32,7 +32,7 @@ class UserController extends Controller
         $result = $this->userRepo->store($request->all());
         if ($result instanceof User) {
             return redirect()->route('admin.users.index')->with([
-                'success' => 'User created successfully!'
+                'success' => __('User created successfully!')
             ]);
         }
         return redirect()->back()->with(['error' => $result]);
