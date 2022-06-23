@@ -73,6 +73,9 @@ Route::middleware([
         Route::get('/{type}/export', [
             \App\Http\Controllers\Admin\ActivityController::class, 'export'
         ])->name('admin.export');
+        Route::get('/filter', [
+            \App\Http\Controllers\Admin\ActivityController::class, 'filter'
+        ])->name('admin.filter');
     });
 });
 

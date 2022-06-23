@@ -75,4 +75,10 @@ class ActivityController extends Controller
         $data = $this->activityRepo->all()->get();
         (new ActivityExporter())->downloadData($data);
     }
+
+    public function filter()
+    {
+        $activities = $this->activityRepo->all()->get();
+        return view('admin.activities.filter', compact('activities'));
+    }
 }

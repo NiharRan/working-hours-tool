@@ -13,7 +13,7 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white shadow-xl sm:rounded-lg">
                     <div>
-                        <form action="" method="get" id="search-form">
+                        <form action="{{ route('admin.filter') }}" method="get" id="search-form">
                             <div class="grid grid-cols-2 gap-4 px-4 pt-4 pb-2">
                                 <div>
                                     <select name="user_id" class="border border-gray-200 w-full rounded-md">
@@ -61,10 +61,6 @@
                                     <x-jet-button class="mt-1">
                                         {{ __('Search') }}
                                     </x-jet-button>
-                                    <a href="#" id="export-btn"
-                                        class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-500 active:bg-green-600 focus:outline-none focus:border-green-600 focus:ring focus:ring-green-300 disabled:opacity-25 transition">
-                                        {{ __('Export') }}
-                                    </a>
                                 </div>
                             </div>
                         </form>
@@ -129,13 +125,3 @@
         </div>
     </div>
 </x-master-layout>
-
-<script>
-    const exportBtn = document.querySelector('#export-btn')
-    exportBtn.addEventListener('click', (e) => {
-        e.preventDefault()
-        const form = document.querySelector('#search-form')
-        form.setAttribute('action', '{{ route('admin.export', 'activity') }}')
-        form.submit();
-    })
-</script>
