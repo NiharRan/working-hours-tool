@@ -4,10 +4,10 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://hrm.test',
     'asset_url' => NULL,
     'timezone' => 'UTC',
-    'locale' => 'en',
+    'locale' => 'fi',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => 'base64:v+YPYiPQUK+wRSnRYLY+ySZJpojr9Ig982R7ldRwseY=',
@@ -384,7 +384,7 @@
       array (
         'driver' => 'local',
         'root' => '/Users/nihardas/projects/hrm/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://hrm.test/storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -418,7 +418,7 @@
     'username' => 'username',
     'email' => 'username',
     'views' => true,
-    'home' => '/dashboard',
+    'home' => '/admin/dashboard',
     'prefix' => '',
     'domain' => NULL,
     'limiters' => 
@@ -689,7 +689,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
+      5 => 'hrm.test',
     ),
     'guard' => 
     array (

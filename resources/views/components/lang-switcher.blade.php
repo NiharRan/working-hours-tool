@@ -1,5 +1,5 @@
 <div class="text-right">
-    <select id="lang-changer" class="border mr-1 pl-2 pr-8 py-1 text-sm border-gray-200" value="{{ session()->get('local') }}">
+    <select id="lang-changer" class="border mr-1" value="{{ session()->get('local') }}">
         <option value="">{{ __('Choose') }}</option>
         <option value="en">English</option>
         <option value="fi">Finnish</option>

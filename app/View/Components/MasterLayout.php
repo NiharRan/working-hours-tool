@@ -15,6 +15,6 @@ class MasterLayout extends Component
     public function render()
     {
         $routeName = Route::current()->getName();
-        return view('admin.layouts.master', compact('routeName'));
+        return view('layouts.master', compact('routeName'));
     }
 }

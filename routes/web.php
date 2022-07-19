@@ -25,18 +25,21 @@ Route::post('/change-local', function (\Illuminate\Http\Request $request) {
     return redirect()->back();
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/', [
+        \App\Http\Controllers\DashboardController::class, 'index'
+    ]);
+
     Route::get('/dashboard', [
         \App\Http\Controllers\DashboardController::class, 'index'
     ])->name('dashboard');
+    Route::get('/activities', [
+        \App\Http\Controllers\ActivityController::class, 'index'
+    ])->name('activities.index');
     Route::post('/activities', [
         \App\Http\Controllers\ActivityController::class, 'store'
     ])->name('activities.store');

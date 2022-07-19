@@ -12,9 +12,15 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
+                    @if(auth()->user()->role == 'admin')
+                        <x-jet-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-jet-nav-link>
+                    @else
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -69,7 +75,7 @@
                     </div>
                 @endif
                 <div class="ml-3 relative">
-                    @include('components.lang-switcher')
+{{--                    @include('components.lang-switcher')--}}
                 </div>
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
@@ -98,9 +104,9 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-{{--                            <x-jet-dropdown-link href="{{ route('profile.show') }}">--}}
-{{--                                {{ __('Profile') }}--}}
-{{--                            </x-jet-dropdown-link>--}}
+                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                {{ __('Profile') }}
+                            </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">

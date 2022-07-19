@@ -39,10 +39,17 @@ class ActivityRepo
             'user', 'project'
         ]);
 
-        $user_id = request()->get('user_id', null);
-        if ($user_id) {
-            $query = $query->where('user_id', $user_id);
-        }
+       if (auth()->user()->role == 'admin') {
+           $user_id = request()->get('user_id', null);
+           if ($user_id) {
+               $query = $query->where('user_id', $user_id);
+           }
+       } else {
+           $user_id = auth()->id();
+           if ($user_id) {
+               $query = $query->where('user_id', $user_id);
+           }
+       }
 
         $project_id = request()->get('project_id', null);
         if ($project_id) {
@@ -68,8 +75,10 @@ class ActivityRepo
     {
         $per_page = request()->get('per_page', 20);
         $data = [];
-        $data['users'] = (new UserRepo)->all()->where('status', 1)->get();
-        $data['projects'] = (new ProjectRepo)->all()->where('status', 1)->get();
+        if (auth()->user()->role === 'admin') {
+            $data['users'] = (new UserRepo)->all()->where('status', 1)->get();
+            $data['projects'] = (new ProjectRepo)->all()->where('status', 1)->get();
+        }
         $data['activities'] = $this->paginate($per_page);
 
         return $data;

@@ -14,6 +14,12 @@ class ActivityController extends Controller
         $this->activityRepo = $activityRepo;
     }
 
+    public function index()
+    {
+        $data = $this->activityRepo->getIndexPageData();
+        return view('activities', $data);
+    }
+
     public function store(ActivityRequest $request)
     {
         $result = $this->activityRepo->store($request->all());
